@@ -1,0 +1,273 @@
+/* importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* variaveis de css */
+:root{
+    --cor-primaria: #eb4034;
+    --cor-secundaria: #f4655b;
+    --verde-escuro: #2e7d6a;
+    --preto: #000;
+    --branco: #fff;
+}
+
+/* reseta todo o css do projeto */
+*{
+    margin: 0; /* zera a margin */
+    padding: 0; /* zera o padding */
+    box-sizing: border-box; 
+    scrollbar-width: none; /* tira a poha da barra de rolagemm do lado direito da pagina */
+    font-family: "Open Sans", sans-serif;
+}
+
+.padding-padrao{
+    padding: 0 50px;
+}
+.header{
+    display: flex; /* deixa o bloco flexivel*/
+    align-items: center; /* alinha os elementos na vertical */
+    gap: 20px; /* espacamento que so funciona com display flex ativo */
+    position: fixed;/* define a posicao */
+    top: 0; /* fica preso no top */
+    left: 0; /* fica preso no top */
+    width: 100%; /* define a largura */
+    height: 60px; /* define a altura */
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    align-items: center;
+    z-index: 999999;
+}
+
+.header-main{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn-menu-header{
+    display: flex;
+    align-items: center;  
+    width: 30px;
+    font-size: 1.8em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--branco);
+    padding: none;
+}
+
+.header-main h1{
+    font-size: 36px;
+    white-space: nowrap;
+}
+
+.menu-lista{
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item{
+    list-style-type: none;
+}
+
+.menu-item a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+/* deixa o menu ativo e na vertical quando esta em desktop, chata pra caralho pprt */
+.menu-mobile .menu-lista {
+    display: flex; /* deixa o bloco flexivel*/
+    flex-direction: column; /* deixa em colunsd (vertical) */
+    gap: 20px; /* espacamento que so funciona com display flex ativo */
+    color: var(--branco);
+    height: inherit;
+}
+
+/* efeito de transicao */
+.menu .menu-lista a {
+    transition: ease-out 0.3s;
+}
+
+.menu .menu-lista a:hover {
+    opacity: 0.8;
+    color: var(--preto);
+}
+
+/* menu mobile */
+.btn-menu-header {
+    /* display: none; */
+    width: 30px;
+    font-size: 1.8em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 900;
+}
+
+.menu-mobile {
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--cor-secundaria);
+    padding: 20px; 
+    transition: left 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.menu-mobile a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.menu-mobile.open {
+    left: 0;
+}
+
+.overlay.show {
+    display: block;
+}
+
+
+/* Transições suaves em elementos que mudam de layout */
+.header,
+.header-main h1,
+.icon {
+    transition: all 0.3s step-end;
+}
+
+
+
+.main {
+    margin-top: 38px;
+    /* anula o tamanho do header */
+    font-family: "Open Sans", sans-serif;
+}
+
+/* chato pra caralho arrumar isso aqui pra ficar certo, perdi meia hora da minha vida nessa poha sfd */
+.main .main-section {
+    width: 100%; /* define a largura */
+    height: 100vh; /* define a altura */
+    display: flex; /* deixa o bloco flexivel*/
+    scroll-margin-top: 60px; /* tbm anula o tamanho do header e faz rolar para o lugar certo*/
+    color: var(--branco);
+    padding: 30px;
+    font-size: 32px; /* tamanho da fonte */
+    font-weight: bold; /* grossura da fonte */
+}
+
+/* cores diferentes para cada secao */
+.main-section:nth-child(1) {
+    background-color: #1d201f;
+}
+
+.main-section:nth-child(2) {
+    background-color: #de4ea9;
+}
+
+.main-section:nth-child(3) {
+    background-color: #3b82f6;
+}
+
+.main-section:nth-child(4) {
+    background-color: #f59e0b;
+}
+
+.main-section:nth-child(5) {
+    background-color: #10b981;
+}
+
+.main-section:nth-child(6) {
+    background-color: #9333ea;
+}
+
+
+.footer {
+    display: flex;
+    padding: 0 32px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    background-color: var(--verde-escuro);
+}
+
+
+@media (max-width: 530px) {
+    .header {
+        gap: 4px;
+    }
+
+    .header-main {
+        justify-content: center;
+    }
+
+    .header-main h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .icon {
+        width: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .padding-padrao {
+        padding: 0 20px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .header-main {
+        justify-content: center;
+    }
+
+    .header-main h1 {
+        font-size: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 1120px) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .header-main {
+        justify-content: center;
+    }
+
+    .header-main h1 {
+        font-size: auto;
+        white-space: nowrap;
+    }
+}
