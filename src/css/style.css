@@ -1,217 +1,225 @@
-/* importando fontes */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-/* variaveis de css */
-:root{
+:root {
     --cor-primaria: #eb4034;
-    --cor-secundaria: #f4655b;
-    --verde-escuro: #2e7d6a;
-    --bg-color: rgb(241, 244, 249);
-    --preto: #000;
+    --bg-color: rgb(255, 255, 245);
     --branco: #fff;
+    --preto: #000;
+    
 }
 
-/* reseta todo o css do projeto */
-*{
-    margin: 0; /* zera a margin */
-    padding: 0; /* zera o padding */
-    box-sizing: border-box; 
-    scrollbar-width: none; /* tira a poha da barra de rolagemm do lado direito da pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
+    scrollbar-width: none;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-.padding-padrao{
+.padding-padrao {
     padding: 0 50px;
 }
-.header{
-    display: flex; /* deixa o bloco flexivel*/
-    align-items: center; /* alinha os elementos na vertical */
-    gap: 20px; /* espacamento que so funciona com display flex ativo */
-    position: fixed;/* define a posicao */
-    top: 0; /* fica preso no top */
-    left: 0; /* fica preso no top */
-    width: 100%; /* define a largura */
-    height: 80px; /* define a altura */
-    border-bottom: 2px solid #dcdcdc; /* cinza claro */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7); /* sombra leve */
-    background-color: var(--cor-primaria);
-    color: var(--branco);
-    align-items: center;
-    z-index: 999999;
-}
 
-.header-main{
+/* CABEÇALHO */
+.header {
     display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
+    height: 80px;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--cor-primaria);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
-.btn-menu-header{
-    display: flex;
-    align-items: center;  
-    width: 30px;
-    font-size: 1.8em;
+.menu-btn {
+    min-width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-primaria);
+    background: transparent;
+    display: grid;
+    place-items: center;
     cursor: pointer;
-    background: none;
-    border: none;
-    color: var(--branco);
-    padding: none;
+    transition: transform .18s ease;
 }
 
-.header-main h1{
-    font-size: 36px;
-    white-space: nowrap;
+.menu-btn:active {
+    transform: scale(.95);
 }
 
-.menu-desktop{
-    display: none;
-}
-.menu-lista{
+.ajuste-titulo {
+    flex: 1;
     display: flex;
-    gap: 20px;
+    justify-content: center;
 }
 
-.menu-item{
+.titulo-header {
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+/* MENU LATERAL */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    padding-top: 20px;
+    margin-top: 80px;
+    /* escondido */
+    align-items: center;
+    width: 300px;
+    height: 100%;
+    background-color: var(--bg-color);
+    transition: left 0.6s ease-in-out;
+    z-index: 20;
+}
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 colunas *
+    align-content: start;
+    padding: 100px 20px 20px;
+    gap: 12px;
+    transition: left 0.3s ease;
+    z-index: 20; */
+
+.menu.open {
+    left: 0;
+    /* aparece */
+}
+
+.menu-lista{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 16px;
+    gap: 16px;
     list-style-type: none;
 }
 
-.menu-item a{
-    text-decoration: none;
-    color: var(--branco);
-}
-
-/* deixa o menu ativo e na vertical quando esta em desktop, chata pra caralho pprt */
-.menu-mobile .menu-lista {
-    display: flex; /* deixa o bloco flexivel*/
-    flex-direction: column; /* deixa em colunsd (vertical) */
-    gap: 20px; /* espacamento que so funciona com display flex ativo */
-    color: var(--branco);
-    height: inherit;
-}
-
-/* efeito de transicao */
-.menu .menu-lista a {
-    transition: ease-out 0.3s;
-}
-
-.menu .menu-lista a:hover {
-    opacity: 0.8;
-    color: var(--preto);
-}
-
-/* menu mobile */
-.btn-menu-header {
-    /* display: none; */
-    width: 30px;
-    font-size: 1.8em;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: var(--branco);
-    padding: none;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+.menu-item{
+    display: flex;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-    z-index: 900;
+    height: 126px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 6px var(--cor-primaria);
+
 }
 
-.menu-mobile {
-    margin-top: 80px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background-color: var(--cor-secundaria);
-    padding: 20px; 
-    transition: left 0.7s;
-    z-index: 1000;
-    overflow-y: auto;
-}
-
-.menu-mobile a {
-    color: white;
+.menu-item a{
+    display: flex;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 26px;
+    color: var(--cor-primaria);
+    width: 126px;
+    height: 126px;
+    align-items: center;
+    justify-content: center;
 }
 
-.menu-mobile.open {
-    left: 0;
+.menu-item:active {
+    transform: scale(.98);
+}
+
+/* .menu a {
+    background: var(--branco);
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease;
+} */
+
+/* .menu a:hover {
+    background: #ffeaea;
+} */
+
+/* FUNDO ESCURO */
+.overlay {
+    display: none;
+    position: fixed;
+    /* margin-top: 80px; */
+    /* bottom: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 15;
+    transition: opacity 0.3s ease;
 }
 
 .overlay.show {
     display: block;
 }
 
-
-/* Transições suaves em elementos que mudam de layout */
-.header,
-.header-main h1,
-.icon {
-    transition: all 0.3s step-end;
+.main{
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
 }
 
-
-
-.main {
-    margin-top: 58px;
-    /* anula o tamanho do header */
-    font-family: "Open Sans", sans-serif;
-}
-
-/* chato pra caralho arrumar isso aqui pra ficar certo, perdi meia hora da minha vida nessa poha sfd */
-.main .main-section {
-    width: 100%; /* define a largura */
-    height: 100vh; /* define a altura */
-    display: flex; /* deixa o bloco flexivel*/
-    scroll-margin-top: 60px; /* tbm anula o tamanho do header e faz rolar para o lugar certo*/
+.banner{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: var(--cor-primaria);
     color: var(--branco);
-    padding: 30px;
-    font-size: 32px; /* tamanho da fonte */
-    font-weight: bold; /* grossura da fonte */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
 
-/* cores diferentes para cada secao */
-.main-section:nth-child(1) {
-    background-color: var(--bg-color);
+.banner h1 {
+    transition: font-size 0.3s ease;
+    font-size: clamp(38px, 6vw, 90px);
+    -webkit-text-stroke: 1px black;
 }
 
-.main-section:nth-child(2) {
-    background-color: #de4ea9;
+
+.section {
+    display: grid;
+    padding: 100px 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    gap: 20px;
 }
 
-.main-section:nth-child(3) {
-    background-color: #3b82f6;
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #111;
 }
 
-.main-section:nth-child(4) {
-    background-color: #f59e0b;
+.section p {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 1em;
 }
 
-.main-section:nth-child(5) {
-    background-color: #10b981;
+.section ul{
+    margin-left: 60px;
 }
-
-.main-section:nth-child(6) {
-    background-color: #9333ea;
-}
-
 
 .footer {
     display: flex;
+    position: fixed;
+    bottom: 0;
     padding: 0 32px;
     width: 100%;
     height: 80px;
@@ -220,64 +228,29 @@ html {
     align-items: center;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
-    background-color: var(--verde-escuro);
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--cor-primaria);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
-
-
-@media (max-width: 530px) {
-    .header {
-        gap: 4px;
-    }
-
-    .header-main {
-        justify-content: center;
-    }
-
-    .header-main h1 {
-        font-size: 20px;
-        white-space: nowrap;
-    }
-
-    .icon {
-        width: 24px;
-    }
-}
-
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .padding-padrao {
         padding: 0 20px;
     }
-
-    .header {
-        display: flex;
-        align-items: center;
-    }
-
-    .menu-desktop {
-        display: none;
-    }
-
-    .header-main {
-        justify-content: center;
-    }
-
-    .header-main h1 {
-        font-size: auto;
-        white-space: nowrap;
-    }
+    
 }
 
-@media (max-width: 1120px) {
-    .menu-desktop {
-        display: none;
+@media (max-width: 480px) {
+    .titulo-header {
+        font-size: 22px;
     }
-
-    .header-main {
-        justify-content: center;
-    }
-
-    .header-main h1 {
-        font-size: auto;
-        white-space: nowrap;
-    }
+    /* .overlay{
+        height: calc(100vh - 136px);
+    } */
 }
+
+/* @media (min-width: 480px){
+    .overlay{
+        height: calc(100vh - 136px);
+    }
+} */

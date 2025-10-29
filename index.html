@@ -1,75 +1,112 @@
+<!-- Ola, mundo! -->
+<!-- FAC SENAC DF -->
+<!-- Trabalho de Introducao a Computacao -->
+<!-- Aluno: Daniel Batista -->
+<!-- Turma: ADS 1A 2025 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eb4034">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#eb4034">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/?size=32&id=YqMviGkCsvoB&format=png&color=000000">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/?size=16&id=YqMviGkCsvoB&format=png&color=000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/?size=180&id=YqMviGkCsvoB&format=png&color=000000">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://img.icons8.com/?size=48&id=YqMviGkCsvoB&format=png&color=000000">
+
     <title>Portal Segurança Digital</title>
 </head>
 <body>
-    
+    <!-- cabecalho -->
     <header class="header padding-padrao" id="header">
-        <div class="btn btn-menu-header" id="btn-menu-header">
-            <img src="https://img.icons8.com/?size=36&id=36389&format=png&color=ffffff" alt="" class="icon">
+        <div class="menu-btn" id="toggleMenu">
+            <img src="https://img.icons8.com/?size=30&id=36389&format=png&color=eb4034" alt="" class="icon">
         </div> <!-- botao do menu -->
 
-        <div class="header-main" id="header-main">
-            <h1 class="titulo titulo-header" id="titulo-header">Portal Segurança Digital</h1> <!-- titulo do header -->
-    
-            <!-- usando abreviacao emmet -> nav.menu.menu-desktop#menu-desktop>ul.menu-lista>(li.menu-item>a[href="#section-$"].menu-link{Section Lorem $})*6 -->
-    
-            <!-- menu em navegadores desktop -->
-            <nav class="menu menu-desktop" id="menu-desktop">
-                <ul class="menu-lista">
-                    <li class="menu-item"><a href="#section-1" class="menu-link">Section 1</a></li>
-                    <li class="menu-item"><a href="#section-2" class="menu-link">Section 2</a></li>
-                    <li class="menu-item"><a href="#section-3" class="menu-link">Section 3</a></li>
-                    <li class="menu-item"><a href="#section-4" class="menu-link">Section 4</a></li>
-                    <li class="menu-item"><a href="#section-5" class="menu-link">Section 5</a></li>
-                    <li class="menu-item"><a href="#section-6" class="menu-link">Section 6</a></li>
-                </ul>
-            </nav>
+        <div class="ajuste-titulo">
 
-            <!-- menu em navegadores mobile -->
-            <nav class="menu menu-mobile" id="menu-lateral" >
-                <ul class="menu-lista">
-                    <li class="menu-item"><a href="#section-1" class="menu-link">Section 1</a></li>
-                    <li class="menu-item"><a href="#section-2" class="menu-link">Section 2</a></li>
-                    <li class="menu-item"><a href="#section-3" class="menu-link">Section 3</a></li>
-                    <li class="menu-item"><a href="#section-4" class="menu-link">Section 4</a></li>
-                    <li class="menu-item"><a href="#section-5" class="menu-link">Section 5</a></li>
-                    <li class="menu-item"><a href="#section-6" class="menu-link">Section 6</a></li>
-                </ul>
-            </nav>
+            <!-- titulo do cabecalho -->
+            <h1 class="titulo-header" id="titulo-header">Portal Segurança Digital</h1>
         </div>
-    </header>
+    </header> 
     <div class="overlay" id="overlay"></div>
-    !-- corpo da pagina -->
+
+    <!-- menu -->
+    <nav class="menu" id="menu">
+        <ul class="menu-lista">
+            <li class="menu-item"><a href="#seguranca-digital" class="menu-link">Segurança Digital</a></li>
+            <li class="menu-item"><a href="#seguranca-informacao" class="menu-link">Segurança da Informação</a></li>
+            <li class="menu-item"><a href="#ciberseguranca" class="menu-link">Cibersegurança</a></li>
+            <li class="menu-item"><a href="#section-4" class="menu-link">Tipos de Golpes</a></li>
+            <li class="menu-item"><a href="#section-5" class="menu-link">Fui vítima?</a></li>
+            <li class="menu-item"><a href="#section-6" class="menu-link">Section 6</a></li>
+        </ul>
+    </nav>
+
     <main class="main" id="main">
-        <!-- secoes do corpo da pagina -->
-        <section class="main-section" id="section-1">
-            <h2 class="titulo-section">Titulo Section 1</h2>
+        <div class="banner">
+            <h1>Segurança Digital</h1>
+        </div>
+
+        <section class="section" id="seguranca-digital">
+            <h2>O que é segurança digital?</h2>
+            <p>
+                A <strong>segurança digital</strong> é o conjunto de práticas e tecnologias que protegem tudo o que usamos no mundo online: redes, computadores, sites, aplicativos, servidores e os dados (como fotos, textos, cadastros e senhas).
+            </p>
+            <p>
+                Ela envolve ações para <strong>prevenir</strong>, <strong>reduzir</strong> e <strong>recuperar</strong> danos causados por ameaças digitais, como invasões, roubo de dados, fraudes e vírus.
+            </p>
+            <ul>
+                <li>Atualizar sistemas e aplicativos;</li>
+                <li>Usar senhas fortes e autenticação em duas etapas;</li>
+                <li>Fazer backups regulares;</li>
+                <li>Criptografar dados sensíveis.</li>
+            </ul>
         </section>
-        <section class="main-section" id="section-2">
-            <h2 class="titulo-section">Titulo Section 2</h2>
+
+        <div class="banner">
+            <h1>Segurança da Informação</h1>
+        </div>
+
+        <section class="section" id="seguranca-informacao">
+            <h2>Segurança da Informação</h2>
+            <p>
+                A <strong>segurança da informação</strong> protege os dados e garante que só pessoas autorizadas tenham acesso a eles. Também assegura que as informações não sejam alteradas sem permissão e possam ser recuperadas quando necessário.
+            </p>
+            <p>
+                Exemplos: criptografia de mensagens (como no WhatsApp) e tokens de autenticação de bancos e sistemas administrativos.
+            </p>
         </section>
-        <section class="main-section" id="section-3">
-            <h2 class="titulo-section">Titulo Section 3</h2>
-        </section>
-        <section class="main-section" id="section-4">
-            <h2 class="titulo-section">Titulo Section 4</h2>
-        </section>
-        <section class="main-section" id="section-5">
-            <h2 class="titulo-section">Titulo Section 5</h2>
-        </section>
-        <section class="main-section" id="section-6">
-            <h2 class="titulo-section">Titulo Section 6</h2>
+
+        <div class="banner">
+            <h1>Cibersegurança</h1>
+        </div>
+
+        <section class="section" id="ciberseguranca">
+            <h2>Cibersegurança</h2>
+            <p>
+                A <strong>cibersegurança</strong> é um conceito mais amplo, que engloba tanto a segurança digital quanto a da informação. Ela trata de medidas contra qualquer tipo de risco online — desde ataques técnicos até ameaças como espionagem, fraudes e desinformação.
+            </p>
+            <p>
+                É a estratégia completa para proteger pessoas, empresas e infraestruturas no ambiente digital.
+            </p>
         </section>
     </main>
 
     <footer class="footer" id="footer">
-        <p class="titulo-footer">@2025 Template - Todos os direitos reserados.</p>
+        <p class="titulo-footer">
+            ©2025
+            <span>
+                <a href="https://portalsegurancadigital.com.br" target="_blank">
+                    portalsegurancadigital.com.br
+                </a>
+            </span>
+            - Todos os direitos reservados.
+        </p>
     </footer>
-    <script type="module" src="./src/js/script.js" defer></script>
+    
+    <script type="module" src="./src/js/script.js"></script>
 </body>
 </html>
