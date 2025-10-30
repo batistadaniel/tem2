@@ -224,6 +224,13 @@ html {
     margin-left: 60px;
 }
 
+.prevencao{
+    background-color: yellow;
+    font-style: italic;
+    border-radius: 4px;
+    padding: 5px;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -260,7 +267,7 @@ html {
     transition: all 0.3s ease-in-out;
     
     /* centralização perfeita */
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 999999;

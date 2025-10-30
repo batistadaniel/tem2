@@ -1,0 +1,19 @@
+# Ativa o mecanismo de reescrita
+RewriteEngine On
+RewriteBase /
+
+# Redireciona URLs amigáveis para suas páginas reais
+RewriteRule ^golpes$ src/pages/golpes.html [L]
+RewriteRule ^fui-vitima$ src/pages/fui-vitima.html [L]
+
+# (Opcional) evita erro 404 quando acessa diretórios
+Options -Indexes
+
+# (Opcional) trata erro 404 com uma página personalizada
+ErrorDocument 404 /src/pages/404.html
+
+
+# Opcional: remove .html da URL automaticamente
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)$ $1.html [L]
