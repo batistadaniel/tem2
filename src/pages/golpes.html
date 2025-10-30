@@ -1,0 +1,529 @@
+<!-- Ola, mundo! -->
+<!-- FAC SENAC DF -->
+<!-- Trabalho de Introducao a Computacao -->
+<!-- Aluno: Daniel Batista -->
+<!-- Turma: ADS 1A 2025 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eb4034">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#eb4034">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/?size=32&id=YqMviGkCsvoB&format=png&color=000000">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/?size=16&id=YqMviGkCsvoB&format=png&color=000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/?size=180&id=YqMviGkCsvoB&format=png&color=000000">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://img.icons8.com/?size=48&id=YqMviGkCsvoB&format=png&color=000000">
+
+    <title>Portal Segurança Digital</title>
+</head>
+<body>
+    <!-- cabecalho -->
+    <header class="header padding-padrao" id="header">
+        <div class="menu-btn" id="toggleMenu">
+            <img src="https://img.icons8.com/?size=30&id=36389&format=png&color=eb4034" alt="" class="icon">
+        </div> <!-- botao do menu -->
+
+        <div class="ajuste-titulo">
+
+            <a href="">
+                <!-- titulo do cabecalho -->
+                <h1 class="titulo-header" id="titulo-header">Portal Segurança Digital</h1>
+            </a>
+
+        </div>
+    </header> 
+    <div class="overlay" id="overlay"></div>
+
+    <!-- menu -->
+    <nav class="menu" id="menu">
+        <ul class="menu-lista">
+            <li class="menu-item"><a href="#seguranca-digital" class="menu-link">Segurança Digital</a></li>
+            <li class="menu-item"><a href="#seguranca-informacao" class="menu-link">Segurança da Informação</a></li>
+            <li class="menu-item"><a href="#ciberseguranca" class="menu-link">Cibersegurança</a></li>
+            <li class="menu-item"><a href="#section-4" class="menu-link">Tipos de Golpes</a></li>
+            <li class="menu-item"><a href="#section-5" class="menu-link">Fui vítima?</a></li>
+            <li class="menu-item"><a href="#section-6" class="menu-link">Section 6</a></li>
+        </ul>
+    </nav>
+
+    <main class="main" id="main">
+
+        <!-- 1 -->
+        <div class="banner"><h1>Phishing e variações</h1></div>
+        <section class="section" id="phishing">
+            <h2>1. Phishing (e variações: Spear Phishing, Whaling, Clone Phishing, Phishing Enganoso)</h2>
+            <p><strong>Nome:</strong> Phishing (e variações: Spear Phishing, Whaling, Clone Phishing, Phishing Enganoso)</p>
+            <p><strong>Grupo-alvo:</strong> Adultos em geral; Spear/Whaling → profissionais, executivos, funcionários com acesso sensível; Clone → contatos de quem recebeu a mensagem original.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> O atacante prepara um e-mail/SMS/mensagem muito parecido com o de uma empresa legítima (banco, provedor, rede social). No spear e whaling o conteúdo é altamente personalizado — informações públicas (LinkedIn, redes sociais) são usadas para tornar o ataque convincente. No clone, o atacante reaproveita um e-mail legítimo anteriormente enviado, substituindo links por URLs maliciosas.</p>
+            <p><strong>Meio:</strong> A vítima recebe a mensagem e é induzida a clicar num link, baixar um anexo ou inserir credenciais numa página falsa. A página pode ser uma cópia quase idêntica do serviço real.</p>
+            <p><strong>Fim:</strong> As credenciais ou dados inseridos caem nas mãos do atacante; podem ser usados para acessar contas, roubar dinheiro, ou pivotar para ataques internos na empresa.</p>
+            <p><strong>Cenário:</strong> Um executivo recebe um e-mail aparentemente do RH pedindo aprovação de um documento: era whaling com link para formulário falso que captura credenciais.</p>
+            <p><strong>Prevenção:</strong> Verificar remetente real, passar o mouse sobre links, não inserir credenciais sem confirmar URL, usar autenticação de 2 fatores (2FA), treinar equipes sobre ataques direcionados.</p>
+        </section>
+
+        <!-- 2 -->
+        <div class="banner"><h1>Smishing (SMS Phishing)</h1></div>
+        <section class="section" id="smishing">
+            <h2>2. Smishing (SMS Phishing)</h2>
+            <p><strong>Nome:</strong> Smishing</p>
+            <p><strong>Grupo-alvo:</strong> Usuários de celular em geral, idosos e menos experientes são alvos comuns.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> A vítima recebe um SMS com aparência de serviço legítimo (entrega, banco, operadora) contendo um link ou instrução urgente.</p>
+            <p><strong>Meio:</strong> Ao clicar, a vítima é levada a um site falso ou baixará um APK/malware; ou é induzida a ligar para um número que solicitará dados.</p>
+            <p><strong>Fim:</strong> Dados pessoais ou credenciais são roubados; dispositivos podem ser infectados.</p>
+            <p><strong>Prevenção:</strong> Não clicar em links de SMS suspeitos; confirmar via app/contato oficial; bloquear remetentes; configurar autenticação adicional nas contas.</p>
+        </section>
+
+        <!-- 3 -->
+        <div class="banner"><h1>Vishing (Phishing por Voz)</h1></div>
+        <section class="section" id="vishing">
+            <h2>3. Vishing (Phishing por Voz)</h2>
+            <p><strong>Nome:</strong> Vishing</p>
+            <p><strong>Grupo-alvo:</strong> Todos — especialmente idosos e funcionários de suporte/financeiro.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> A vítima recebe uma ligação de alguém se passando por banco, suporte técnico ou autoridade.</p>
+            <p><strong>Meio:</strong> O golpista usa engenharia social para criar urgência (conta bloqueada, fraude detectada) e pede códigos, senhas, ou convence a instalar software de acesso remoto.</p>
+            <p><strong>Fim:</strong> Com os dados ou acesso remoto, o criminoso realiza transferências, altera cadastros ou clona contas.</p>
+            <p><strong>Prevenção:</strong> Não fornecer códigos/senhas por telefone; desligar e ligar no número oficial da instituição para confirmar; nunca permitir instalação de acesso remoto sem checagem.</p>
+        </section>
+
+        <!-- 4 -->
+        <div class="banner"><h1>Fraude de CEO</h1></div>
+        <section class="section" id="fraude-ceo">
+            <h2>4. Fraude de CEO / Fraude Empresarial por Engenharia Social</h2>
+            <p><strong>Nome:</strong> Fraude de CEO (Business Email Compromise)</p>
+            <p><strong>Grupo-alvo:</strong> Empresas (contabilidade, financeira), funcionários com poder de movimentação financeira.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Atacantes pesquisam hierarquia da empresa e se passam por executivos em e-mails/sistemas.</p>
+            <p><strong>Meio:</strong> Enviam ordens de pagamento urgentes a um funcionário do financeiro, usando e-mail semelhante ou comprometido.</p>
+            <p><strong>Fim:</strong> Transferência de valores a contas do criminoso; detecção tardia por falta de confirmações formais.</p>
+            <p><strong>Prevenção:</strong> Procedimentos de verificação para transferências (confirmação por telefone presencial), listas de contas aprovadas, dupla autorização.</p>
+        </section>
+
+        <!-- 5 -->
+        <div class="banner"><h1>Golpe da Falsa Investigação <br> Falsa Central de Atendimento <br> Golpe do 0800</h1></div>
+        <section class="section" id="falsa-investigacao">
+            <h2>5. Golpe da Falsa Investigação nas Agências / Falsa Central de Atendimento / Golpe do 0800</h2>
+            <p><strong>Nome:</strong> Falsa Investigação / Falsa Central / 0800 falso</p>
+            <p><strong>Grupo-alvo:</strong> Consumidores em geral, idosos vulneráveis.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Contato via SMS, e-mail ou ligação alegando problema (multas, cobrança, processo).</p>
+            <p><strong>Meio:</strong> Enviam boleto falso, link ou solicitam pagamento/inscrição para "regularizar" situação.</p>
+            <p><strong>Fim:</strong> Pagamentos vão para criminosos; dados pessoais são colhidos para outras fraudes.</p>
+            <p><strong>Prevenção:</strong> Verificar diretamente com a agência/empresa por canais oficiais; não pagar sem confirmar; desconfiar de ameaças urgentes por canais não verificados.</p>
+        </section>
+
+        <!-- 6 -->
+        <div class="banner"><h1>Golpe do Falso Presente / Entregador Falso / Maquininha manipulada no delivery</h1></div>
+        <section class="section" id="falso-presente">
+            <h2>6. Golpe do Falso Presente / Entregador Falso / Maquininha manipulada no delivery</h2>
+            <p><strong>Nome:</strong> Golpe do Falso Presente / Entregador falso / Maquininha quebrada</p>
+            <p><strong>Grupo-alvo:</strong> Consumidores que compram online ou recebem entregas; públicos em áreas urbanas.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Entregador aparece dizendo que há um presente ou entrega com taxa pendente; ou a maquininha tem visor oculto.</p>
+            <p><strong>Meio:</strong> Exigem pagamento à vista (Pix ou maquininha) e inserem valor maior que o devido; ou apresentam comprovante/maquininha adulterada.</p>
+            <p><strong>Fim:</strong> Dinheiro/valor é desviado; vítima perde quantia ou tem cartão clonado.</p>
+            <p><strong>Prevenção:</strong> Conferir valores antes de autorizar pagamento; recusar transações em maquininhas suspeitas; pagar pelo app oficial do serviço sempre que possível.</p>
+        </section>
+
+        <!-- 7 -->
+        <div class="banner"><h1>Pharming (Envenenamento de DNS)</h1></div>
+        <section class="section" id="pharming">
+            <h2>7. Pharming (Envenenamento de DNS)</h2>
+            <p><strong>Nome:</strong> Pharming (DNS poisoning / envenenamento de cache DNS)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários que acessam sites sensíveis (bancos, sistemas corporativos) — todos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> O atacante compromete servidores DNS (ou o cache do roteador/host) para mapear domínios legítimos para IPs controlados por ele.</p>
+            <p><strong>Meio:</strong> Usuário digita a URL correta, mas é levado para site falso sem perceber (certificado pode até parecer legítimo em ataques sofisticados).</p>
+            <p><strong>Fim:</strong> Credenciais capturadas; dados roubados.</p>
+            <p><strong>Prevenção:</strong> Manter roteadores atualizados, usar DNS de confiança (com validação), HSTS, monitoramento de certificados, 2FA.</p>
+        </section>
+
+        <!-- 8 -->
+        <div class="banner"><h1>Watering Hole</h1></div>
+        <section class="section" id="watering-hole">
+            <h2>8. Watering Hole</h2>
+            <p><strong>Nome:</strong> Watering Hole</p>
+            <p><strong>Grupo-alvo:</strong> Profissionais de nichos específicos; funcionários de empresas alvo.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Atacante identifica sites frequentemente visitados pelo público-alvo (comunidades, portais setoriais).</p>
+            <p><strong>Meio:</strong> Compromete o site e injeta código malicioso que carrega malware nos visitantes.</p>
+            <p><strong>Fim:</strong> Dispositivos infectados; invasão da rede ou coleta de credenciais.</p>
+            <p><strong>Prevenção:</strong> Atualizar navegadores, usar soluções EDR/antimalware, segmentar rede empresarial, monitorar sites de terceiros.</p>
+        </section>
+
+        <!-- 9 -->
+        <div class="banner"><h1>Cross-site Scripting (XSS)</h1></div>
+        <section class="section" id="xss">
+            <h2>9. Cross-site Scripting (XSS)</h2>
+            <p><strong>Nome:</strong> Cross-site scripting (XSS)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários de sites vulneráveis; empresas que mantêm aplicações web.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Site não valida/escapa entrada do usuário.</p>
+            <p><strong>Meio:</strong> Atacante injeta script malicioso que é executado no navegador de outros visitantes (roubo de cookies, sessão, redirecionamentos).</p>
+            <p><strong>Fim:</strong> Sessões sequestradas, dados expostos, ações executadas em nome do usuário.</p>
+            <p><strong>Prevenção:</strong> Programação segura (escape/validate), Content Security Policy (CSP), atualizações e testes de segurança.</p>
+        </section>
+
+        <!-- 10 -->
+        <div class="banner"><h1>SQL Injection e outros ataques de injeção</h1></div>
+        <section class="section" id="sql-injection">
+            <h2>10. SQL Injection e outros ataques de injeção</h2>
+            <p><strong>Nome:</strong> SQL Injection (Injeção de scripts)</p>
+            <p><strong>Grupo-alvo:</strong> Aplicações web e seus usuários; empresas com bancos de dados mal protegidos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Aplicação aceita entrada sem sanitização.</p>
+            <p><strong>Meio:</strong> Atacante envia payloads que alteram consultas SQL para extrair, modificar ou apagar dados.</p>
+            <p><strong>Fim:</strong> Vazamento de dados, tomada de controle do banco, danos ao negócio.</p>
+            <p><strong>Prevenção:</strong> Prepared statements/queries parametrizadas, validação de entrada, princípio do menor privilégio no BD.</p>
+        </section>
+
+        <!-- 11 -->
+        <div class="banner"><h1>Ataques de Força Bruta / Exploits</h1></div>
+        <section class="section" id="forca-bruta">
+            <h2>11. Ataques de Força Bruta / Exploits</h2>
+            <p><strong>Nome:</strong> Força Bruta / Exploits</p>
+            <p><strong>Grupo-alvo:</strong> Contas online com senhas fracas, sistemas vulneráveis.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Atacante tenta várias combinações de senha ou explora vulnerabilidades conhecidas.</p>
+            <p><strong>Meio:</strong> Uso de listas de senhas, cracking automatizado ou exploração de falha de software.</p>
+            <p><strong>Fim:</strong> Acesso à conta/sistema, movimentos laterais na rede.</p>
+            <p><strong>Prevenção:</strong> Senhas fortes, bloqueio por tentativas, rate-limiting, WAF, manter sistemas atualizados.</p>
+        </section>
+
+        <!-- 12 -->
+        <div class="banner"><h1>DDoS (Negação de Serviço Distribuída)</h1></div>
+        <section class="section" id="ddos">
+            <h2>12. DDoS (Negação de Serviço Distribuída)</h2>
+            <p><strong>Nome:</strong> DDoS</p>
+            <p><strong>Grupo-alvo:</strong> Provedores de serviço, e-commerce, sites governamentais.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Atacante coordena grande número de dispositivos (botnet) para enviar tráfego massivo.</p>
+            <p><strong>Meio:</strong> Servidor fica sobrecarregado, degradando ou interrompendo serviço.</p>
+            <p><strong>Fim:</strong> Serviço indisponível; prejuízo financeiro e reputacional; às vezes usado como distração para outros ataques.</p>
+            <p><strong>Prevenção:</strong> Proteções anti-DDoS, CDN, escalabilidade, monitoramento de tráfego e plan de resposta.</p>
+        </section>
+
+        <!-- 13 -->
+        <div class="banner"><h1>Manipulação de URL / Typosquatting / Homograph attacks</h1></div>
+        <section class="section" id="typosquatting">
+            <h2>13. Manipulação de URL / Typosquatting / Homograph attacks</h2>
+            <p><strong>Nome:</strong> Manipulação de URL (typosquatting, homograph)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários de sites populares; compradores online.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Golpista cria URL parecida com a original (substitui letras, usa domínios semelhantes).</p>
+            <p><strong>Meio:</strong> Vítima digita endereço errado ou clica em link malicioso; site falsificado solicita credenciais/pagamento.</p>
+            <p><strong>Fim:</strong> Dados roubados, pagamentos desviados.</p>
+            <p><strong>Prevenção:</strong> Conferir URLs, usar bookmarks, prestar atenção a caracteres estranhos, certificado TLS.</p>
+        </section>
+
+        <!-- 14 -->
+        <div class="banner"><h1>Golpes com Dropbox / Google Docs (Phishing via serviços de armazenamento)</h1></div>
+        <section class="section" id="phishing-cloud">
+            <h2>14. Golpes com Dropbox / Google Docs (Phishing via serviços de armazenamento)</h2>
+            <p><strong>Nome:</strong> Phishing via Google Docs / Dropbox (falsas telas de login)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários de armazenamento na nuvem; profissionais que compartilham documentos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Link para documento compartilhado encaminhado por e-mail/WhatsApp.</p>
+            <p><strong>Meio:</strong> Ao clicar, a vítima vê uma tela de login falsa que captura credenciais.</p>
+            <p><strong>Fim:</strong> Conta na nuvem é comprometida; arquivos roubados ou usados para espalhar mais phishing.</p>
+            <p><strong>Prevenção:</strong> Confirmar remetente, checar URL, usar 2FA, validar via app oficial.</p>
+        </section>
+
+        <!-- 15 -->
+        <div class="banner"><h1>Fraude Contactless / Captura via aproximação</h1></div>
+        <section class="section" id="contactless">
+            <h2>15. Fraude Contactless / Captura via aproximação</h2>
+            <p><strong>Nome:</strong> Fraude Contactless (proximidade)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários que usam cartões/contactless em locais públicos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Criminoso usa dispositivo de leitura em locais de aglomeração para tentar capturar dados de cartões contactless.</p>
+            <p><strong>Meio:</strong> Em teoria, aproximam-se para tentar realizar pagamentos não autorizados; na prática, métodos variam e sucesso é limitado.</p>
+            <p><strong>Fim:</strong> Tentativas de cobrança não autorizada ou clonagem.</p>
+            <p><strong>Prevenção:</strong> Cobrir cartão quando não usar, bloquear pagamentos sem confirmação, usar carteiras digitais que exigem autenticação.</p>
+        </section>
+
+        <!-- 16 -->
+        <div class="banner"><h1>Roubo/Clonagem de Contas de Redes Sociais / Aplicativos / Clonagem de WhatsApp</h1></div>
+        <section class="section" id="clonagem-contas">
+            <h2>16. Roubo/Clonagem de Contas de Redes Sociais / Aplicativos / Clonagem de WhatsApp</h2>
+            <p><strong>Nome:</strong> Roubo/clonagem de contas (inclui clonagem de WhatsApp)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários de redes sociais e aplicativos de mensagens.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Atacante obtém credenciais (phishing), intercepta SMS (SIM swap) ou usa engenharia social para obter código de verificação.</p>
+            <p><strong>Meio:</strong> Usa o código para ativar conta em outro dispositivo, assume controle.</p>
+            <p><strong>Fim:</strong> Envia mensagens de golpe aos contatos (pedindo dinheiro), publica conteúdos maliciosos.</p>
+            <p><strong>Prevenção:</strong> 2FA com app autenticador, não compartilhar códigos, proteger número (PIN com operadora), cuidado com links.</p>
+        </section>
+
+        <!-- 17 -->
+        <div class="banner"><h1>Sequestro da Linha Telefônica (SIM Swap)</h1></div>
+        <section class="section" id="sim-swap">
+            <h2>17. Sequestro da Linha Telefônica (SIM Swap)</h2>
+            <p><strong>Nome:</strong> SIM Swap (sequestro da linha)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários com contas financeiras vinculadas ao número; pessoas com alto perfil.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Criminoso convence operadora a transferir número para outro chip (fraude social/engenharia).</p>
+            <p><strong>Meio:</strong> Recebe SMS/calls destinados à vítima (códigos 2FA, reset de senha).</p>
+            <p><strong>Fim:</strong> Acessa contas, realiza fraudes financeiras.</p>
+            <p><strong>Prevenção:</strong> PIN/senha de conta com operadora, alertas de portabilidade, 2FA via app em vez de SMS.</p>
+        </section>
+
+        <!-- 18 -->
+        <div class="banner"><h1>Fraude de Pagamentos: Pix (variações)</h1></div>
+        <section class="section" id="fraude-pix">
+            <h2>18. Fraude de Pagamentos: Pix (variações)</h2>
+            <p><strong>Nome:</strong> Fraudes com Pix (Pix errado, Pix falso, Robô do Pix, Pix de volta)</p>
+            <p><strong>Grupo-alvo:</strong> Vendedores em marketplaces, usuários que transferem com frequência.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Golpista envia comprovante falso de pagamento ou solicita pequeno depósito prometendo retorno.</p>
+            <p><strong>Meio:</strong> Vítima realiza transferência baseada em comprovante falsificado; ou devolve "erro" conforme instruções do golpista.</p>
+            <p><strong>Fim:</strong> Dinheiro é perdido; vendedor não recebe pagamento real.</p>
+            <p><strong>Prevenção:</strong> Confirmar efetiva compensação na conta antes de liberar mercadoria; desconfiar de solicitações urgentes; checar extrato real.</p>
+        </section>
+
+        <!-- 19 -->
+        <div class="banner"><h1>Boleto Falso / Boleto adulterado</h1></div>
+        <section class="section" id="boleto-falso">
+            <h2>19. Boleto Falso / Boleto adulterado</h2>
+            <p><strong>Nome:</strong> Boleto falso / adulterado</p>
+            <p><strong>Grupo-alvo:</strong> Consumidores, empresas que pagam boletos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Golpista envia boleto por e-mail ou substitui link no site por boleto com conta do fraudador.</p>
+            <p><strong>Meio:</strong> Vítima paga o boleto sem perceber que foi alterado.</p>
+            <p><strong>Fim:</strong> Pagamento vai para conta do criminoso; serviço não é regularizado.</p>
+            <p><strong>Prevenção:</strong> Conferir linha digitável e beneficiário, preferir débito automático em conta correta, validar via portal oficial.</p>
+        </section>
+
+        <!-- 20 -->
+        <div class="banner"><h1>Empréstimo Falso / Oferta de Crédito Fraudulenta</h1></div>
+        <section class="section" id="emprestimo-falso">
+            <h2>20. Empréstimo Falso / Oferta de Crédito Fraudulenta</h2>
+            <p><strong>Nome:</strong> Empréstimo falso</p>
+            <p><strong>Grupo-alvo:</strong> Pessoas endividadas ou buscando crédito rápido.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Oferta de empréstimo com condições fáceis.</p>
+            <p><strong>Meio:</strong> Solicitação de depósito antecipado (taxa) ou dados sensíveis.</p>
+            <p><strong>Fim:</strong> Sem crédito; dinheiro perdido; dados usados para outras fraudes.</p>
+            <p><strong>Prevenção:</strong> Só contratar instituições reguladas; desconfiar de adiantamentos; checar reputação.</p>
+        </section>
+
+        <!-- 21 -->
+        <div class="banner"><h1>Fraudes com Cartões (clonagem, troca de cartão)</h1></div>
+        <section class="section" id="fraude-cartoes">
+            <h2>21. Fraudes com Cartões (clonagem, troca de cartão)</h2>
+            <p><strong>Nome:</strong> Fraudes de cartão (clonagem, troca física)</p>
+            <p><strong>Grupo-alvo:</strong> Usuários que usam cartões em estabelecimentos físicos; caixas eletrônicos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Golpista observa digitação de senha ou instala skimmer em terminal/maquininha. Em troca física, substitui cartão por outro falso após distração.</p>
+            <p><strong>Meio:</strong> Usam dados para compras/clonagens.</p>
+            <p><strong>Fim:</strong> Débitos indevidos, necessidade de contestação e bloqueio.</p>
+            <p><strong>Prevenção:</strong> Cobrir teclado, usar bancos com token/biometria, checar faturas, evitar emprestar cartão.</p>
+        </section>
+
+        <!-- 22 -->
+        <div class="banner"><h1>Golpe do Link Falso em Ofertas / Falso Leilão / Compras Online Falsas</h1></div>
+        <section class="section" id="link-falso">
+            <h2>22. Golpe do Link Falso em Ofertas / Falso Leilão / Compras Online Falsas</h2>
+            <p><strong>Nome:</strong> Link falso / loja falsa / leilão falso</p>
+            <p><strong>Grupo-alvo:</strong> Compradores online, público em busca de promoções.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Anúncios ou envios em redes sociais redirecionam para lojas falsas.</p>
+            <p><strong>Meio:</strong> Vítima paga por produto que não existe ou fornece dados do cartão.</p>
+            <p><strong>Fim:</strong> Produto não entregue; dados usados para fraude.</p>
+            <p><strong>Prevenção:</strong> Comprar em sites com reputação, conferir CNPJ/contato, desconfiar de preços muito abaixo do mercado, usar meios de pagamento seguros.</p>
+        </section>
+
+        <!-- 23 -->
+        <div class="banner"><h1>Golpe do Resgate de Pontos / Promoções Falsas</h1></div>
+        <section class="section" id="resgate-pontos">
+            <h2>23. Golpe do Resgate de Pontos / Promoções Falsas</h2>
+            <p><strong>Nome:</strong> Resgate de pontos / Promoções falsas</p>
+            <p><strong>Grupo-alvo:</strong> Clientes de programas de fidelidade; usuários que resgatam pontos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Mensagem com link para resgatar pontos/prêmios.</p>
+            <p><strong>Meio:</strong> Site falso coleta login e senhas do programa.</p>
+            <p><strong>Fim:</strong> Pontos perdidos; contas comprometidas.</p>
+            <p><strong>Prevenção:</strong> Acessar programas apenas por site/app oficial; checar comunicações oficiais.</p>
+        </section>
+
+        <!-- 24 -->
+        <div class="banner"><h1>Roubo de Identidade (Identity Theft)</h1></div>
+        <section class="section" id="roubo-identidade">
+            <h2>24. Roubo de Identidade (Identity Theft)</h2>
+            <p><strong>Nome:</strong> Roubo de Identidade</p>
+            <p><strong>Grupo-alvo:</strong> Indivíduos cujos dados pessoais (CPF, RG, nascimento) estão disponíveis ou foram vazados.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Coleta de dados por phishing, vazamentos, compra em mercados clandestinos.</p>
+            <p><strong>Meio:</strong> Dados são usados para abrir contas, solicitar crédito, fraudar serviços.</p>
+            <p><strong>Fim:</strong> Vítima sofre danos financeiros e reputacionais; processo de reparação longo.</p>
+            <p><strong>Prevenção:</strong> Monitorar CPF, alertas de fraude, não compartilhar dados, revisar extratos e SPC/Serasa.</p>
+        </section>
+
+        <!-- 25 -->
+        <div class="banner"><h1>Conta Emprestada (uso de contas de terceiros em golpes)</h1></div>
+        <section class="section" id="conta-emprestada">
+            <h2>25. Conta Emprestada (uso de contas de terceiros em golpes)</h2>
+            <p><strong>Nome:</strong> Conta emprestada / alugada (para lavagem e fraudes)</p>
+            <p><strong>Grupo-alvo:</strong> Pessoas com contas ou documentos “facilitados” por ganhos rápidos (geralmente vulneráveis).</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Criminoso convence alguém a abrir/emprestar conta em troca de pagamento.</p>
+            <p><strong>Meio:</strong> Conta é usada para receber valores ilícitos (vendas fraudulentas, lavagem).</p>
+            <p><strong>Fim:</strong> Dono da conta é responsabilizado, perde dinheiro e tem problemas legais.</p>
+            <p><strong>Prevenção:</strong> Não emprestar contas; informar-se sobre riscos legais; denunciar propostas.</p>
+        </section>
+
+        <!-- 26 -->
+        <div class="banner"><h1>Obtenção de Dados de Celular Roubado / Dispositivo furtado</h1></div>
+        <section class="section" id="celular-roubado">
+            <h2>26. Obtenção de Dados de Celular Roubado / Dispositivo furtado</h2>
+            <p><strong>Nome:</strong> Acesso via celular roubado/furtado</p>
+            <p><strong>Grupo-alvo:</strong> Usuários que perdem dispositivos sem proteção.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Dispositivo roubado sem bloqueio forte.</p>
+            <p><strong>Meio:</strong> Criminoso acessa apps, contas, mensagens e reseta senhas com códigos de SMS recebidos.</p>
+            <p><strong>Fim:</strong> Fraudes, clonagem de contas, vazamento de dados.</p>
+            <p><strong>Prevenção:</strong> Bloqueio por senha/biometria, criptografia, backups, localizar/apagar remoto, autenticação por app.</p>
+        </section>
+
+        <!-- 27 -->
+        <div class="banner"><h1>Comprometimento de Assinatura Eletrônica / Token</h1></div>
+        <section class="section" id="assinatura-eletronica">
+            <h2>27. Comprometimento de Assinatura Eletrônica / Token</h2>
+            <p><strong>Nome:</strong> Comprometimento de assinatura eletrônica / token</p>
+            <p><strong>Grupo-alvo:</strong> Usuários e empresas que assinam documentos eletronicamente.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Credenciais de assinatura ou token expostas por phishing ou compartilhamento indevido.</p>
+            <p><strong>Meio:</strong> Ator malicioso assina documentos em nome da vítima.</p>
+            <p><strong>Fim:</strong> Fraude contratual, autorização de transações.</p>
+            <p><strong>Prevenção:</strong> Proteger credenciais, usar certificados seguros, políticas de acesso, logs de auditoria.</p>
+        </section>
+
+        <!-- 28 -->
+        <div class="banner"><h1>Chamadas Falsas / Spoofing Telefônico</h1></div>
+        <section class="section" id="spoofing">
+            <h2>28. Chamadas Falsas / Spoofing Telefônico</h2>
+            <p><strong>Nome:</strong> Spoofing (número falso) / chamadas falsas</p>
+            <p><strong>Grupo-alvo:</strong> Usuários que atendem ligações de instituições.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Atacante falsifica o ID de chamada para parecer legítimo.</p>
+            <p><strong>Meio:</strong> Engana a vítima para fornecer dados/transferir dinheiro.</p>
+            <p><strong>Fim:</strong> Dados são usados para fraudes.</p>
+            <p><strong>Prevenção:</strong> Desconfiar de ligações solicitando dados; confirmar via canais oficiais.</p>
+        </section>
+
+        <!-- 29 -->
+        <div class="banner"><h1>Vazamento de Dados e Divulgação sem Consentimento (Lei Carolina Dieckmann)</h1></div>
+        <section class="section" id="vazamento-dados">
+            <h2>29. Vazamento de Dados e Divulgação sem Consentimento (Lei Carolina Dieckmann)</h2>
+            <p><strong>Nome:</strong> Vazamento de dados / divulgação indevida</p>
+            <p><strong>Grupo-alvo:</strong> Indivíduos e empresas cujos dados estão armazenados em serviços comprometidos.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Ataque a sistemas ou erro humano que expõe dados.</p>
+            <p><strong>Meio:</strong> Dados são disponibilizados publicamente ou vendidos.</p>
+            <p><strong>Fim:</strong> Usados para fraude, extorsão ou reputação prejudicada.</p>
+            <p><strong>Prevenção:</strong> Políticas de privacidade, proteção de dados (LGPD), backups, criptografia, resposta a incidentes.</p>
+        </section>
+
+        <!-- 30 -->
+        <div class="banner"><h1>Falsificação de Dados Eletrônicos / Crimes Cibernéticos (abrangente)</h1></div>
+        <section class="section" id="falsificacao-dados">
+            <h2>30. Falsificação de Dados Eletrônicos / Crimes Cibernéticos (abrangente)</h2>
+            <p><strong>Nome:</strong> Falsificação de dados eletrônicos</p>
+            <p><strong>Grupo-alvo:</strong> Sistemas jurídicos, empresas, operações financeiras.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Manipulação de documentos digitais, logs ou evidências.</p>
+            <p><strong>Meio:</strong> Uso de documentos falsos para fraudar contratos, processos ou registros.</p>
+            <p><strong>Fim:</strong> Perdas financeiras, fraudes legais.</p>
+            <p><strong>Prevenção:</strong> Assinatura digital robusta, validação de documentos, cadeias de custódia digitais.</p>
+        </section>
+
+        <!-- 31 -->
+        <div class="banner"><h1>Ameaças de IA Generativa (Deepfakes, Engenharia Social personalizada)</h1></div>
+        <section class="section" id="deepfakes">
+            <h2>31. Ameaças de IA Generativa (Deepfakes, Engenharia Social personalizada)</h2>
+            <p><strong>Nome:</strong> Deepfakes / IA generativa usada em golpes</p>
+            <p><strong>Grupo-alvo:</strong> Público em geral; alvos de alto perfil (executivos, políticos).</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Ataque usa áudio ou vídeo fabricado para simular voz/imagem de pessoa confiável.</p>
+            <p><strong>Meio:</strong> Vídeo/áudio é usado para extorquir, enganar ou justificar ações (ordens de pagamento, manipular opinião).</p>
+            <p><strong>Fim:</strong> Transferências indevidas, danos reputacionais.</p>
+            <p><strong>Prevenção:</strong> Verificação multifator, confirmar pedidos sensíveis por múltiplos canais, checagem técnica de mídia (metadados), treinamento.</p>
+        </section>
+
+        <!-- 32 -->
+        <div class="banner"><h1>Tailgating (Variação Digital / Social)</h1></div>
+        <section class="section" id="tailgating">
+            <h2>32. Tailgating (Variação Digital / Social)</h2>
+            <p><strong>Nome:</strong> Tailgating (físico e variação digital)</p>
+            <p><strong>Grupo-alvo:</strong> Empresas com acesso restrito; funcionários.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Pessoa entra em local restrito seguindo alguém; na variação digital, usa credenciais coletadas para “seguir” acesso a sistemas.</p>
+            <p><strong>Meio:</strong> Ganha acesso físico ou lógico a recurso protegido.</p>
+            <p><strong>Fim:</strong> Roubo de bens ou dados.</p>
+            <p><strong>Prevenção:</strong> Controle de acesso físico, cultura de não permitir entrada de estranhos, autenticação forte.</p>
+        </section>
+
+        <!-- 33 -->
+        <div class="banner"><h1>Fraudes no Mercado de Criptomoedas e Câmbio</h1></div>
+        <section class="section" id="fraude-crypto">
+            <h2>33. Fraudes no Mercado de Criptomoedas e Câmbio</h2>
+            <p><strong>Nome:</strong> Fraude em cripto / câmbio (scams, exchanges falsas, pumps & dumps)</p>
+            <p><strong>Grupo-alvo:</strong> Investidores iniciantes e experientes; pessoas atraídas por lucro rápido.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Oferta de investimento ou exchange com promessa de lucro.</p>
+            <p><strong>Meio:</strong> Plataformas falsas coletam depósitos; esquemas de pirâmide atraem novos entrantes.</p>
+            <p><strong>Fim:</strong> Fundos são perdidos; saques bloqueados.</p>
+            <p><strong>Prevenção:</strong> Verificar regulamentação, usar exchanges conhecidas, desconfiar de garantias de lucro, estudar o mercado.</p>
+        </section>
+
+        <!-- 34 -->
+        <div class="banner"><h1>Golpe do Boleto / Cobranças Indevidas em Nome da Anatel e Operadoras</h1></div>
+        <section class="section" id="boleto-anatel">
+            <h2>34. Golpe do Boleto / Cobranças Indevidas em Nome da Anatel e Operadoras</h2>
+            <p><strong>Nome:</strong> Cobranças falsas em nome de Anatel/operadoras</p>
+            <p><strong>Grupo-alvo:</strong> Assinantes de telecom, consumidores.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Envio de boleto ou link com suposta multa/taxa da Anatel ou operadora.</p>
+            <p><strong>Meio:</strong> Consumidor paga para evitar suspensão; dados ficam expostos.</p>
+            <p><strong>Fim:</strong> Dinheiro perdido; risco de novas tentativas de fraude.</p>
+            <p><strong>Prevenção:</strong> Confirmar por canais oficiais, não pagar boletos sem checar beneficiário.</p>
+        </section>
+
+        <!-- 35 -->
+        <div class="banner"><h1>Golpe da Conta Emprestada / Lavagem via Terceiros</h1></div>
+        <section class="section" id="conta-lavagem">
+            <h2>35. Golpe da Conta Emprestada / Lavagem via Terceiros</h2>
+            <p><strong>Nome:</strong> Conta emprestada para lavagem</p>
+            <p><strong>Grupo-alvo:</strong> Pessoas em situação financeira vulnerável que “emprestam” conta.</p>
+            <p><strong>Como acontece:</strong></p>
+            <p><strong>Início:</strong> Proposta de ganho fácil para emprestar conta.</p>
+            <p><strong>Meio:</strong> Conta recebe valores ilícitos e os repassa depois; titular parece responsável.</p>
+            <p><strong>Fim:</strong> Problemas legais e financeiros para o titular.</p>
+            <p><strong>Prevenção:</strong> Nunca emprestar conta; denunciar ofertas.</p>
+        </section>
+
+    </main>
+
+    <img class="btnTopo" id="btnTopo" src="https://img.icons8.com/?size=50&id=26140&format=png&color=000000" alt="Voltar ao topo">
+
+    <footer class="footer" id="footer">
+        <p class="titulo-footer">
+            ©2025
+            <span>
+                <a href="https://portalsegurancadigital.com.br">
+                    portalsegurancadigital.com.br
+                </a>
+            </span>
+            - Todos os direitos reservados.
+        </p>
+
+        <p>Produzido por Daniel Batista 👍🏿</p>
+    </footer>
+    
+    <script type="module" src="../js/script.js"></script>
+</body>
+</html>

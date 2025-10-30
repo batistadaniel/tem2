@@ -24,3 +24,15 @@ function closeMenu() {
     overlay.classList.remove('show');
     icon.src = 'https://img.icons8.com/?size=28&id=36389&format=png&color=eb4034';
 }
+
+const btn = document.getElementById('btnTopo');
+
+// mostra o botão quando rolar 300px
+window.addEventListener('scroll', () => {
+    btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+});
+
+// ação de voltar ao topo
+btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
