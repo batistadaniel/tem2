@@ -208,10 +208,13 @@ html {
     /* gap: 20px; */
 }
 
-.section h2 {
+.section h2, h3 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #111;
+}
+
+.section h3 {
 }
 
 .section p {
