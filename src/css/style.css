@@ -227,7 +227,9 @@ html {
     margin-bottom: 20px;
     color: #111;
 }
-
+.section2:last-child {
+    padding-bottom: 100px;
+}
 .section p {
     font-size: 18px;
     text-align: justify;
